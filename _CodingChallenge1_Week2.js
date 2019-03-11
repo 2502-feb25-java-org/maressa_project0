@@ -53,3 +53,7 @@ values(5735663899)
 update Orders
 set prodId = 4729, customerId = 39738
 where ordId = 5735663899;
+
+select * from Orders
+where firstName='Tina', lastname='Smith';
+
