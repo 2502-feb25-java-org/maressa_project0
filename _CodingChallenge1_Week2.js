@@ -57,3 +57,10 @@ where ordId = 5735663899;
 select * from Orders
 where firstName='Tina', lastname='Smith';
 
+select sum()
+from Orders
+where prodId = 
+
+update Product
+set prodPrice = 250.00
+where prodName = 'iPhone';
