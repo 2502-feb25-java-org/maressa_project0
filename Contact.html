@@ -1,27 +1,136 @@
-<form action="/my-handling-form-page" method="post">
+<!DOCTYPE html>
+<html lang=en-US>
 
+    <head>
+        <title>Revature- Sign Up</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!----<script>
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild( clon);
+        </script>-->
+    </head>
+
+<!------------------------------------------------------------------------------------------------------------------------->
+    
+    <body>
+        <div class="container" id="h1">
+          <!----<template>-->
+            <header>
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="navbar" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <img alt="Image Not found"
+                        src="https://raw.githubusercontent.com/2502-feb25-java-org/training-code/master/02-Week2-SQL/rev-logo-2.png"
+                          width="70" length="70" />
+      
+                              </li>
+      
+                              <li class="nav-item">
+      
+                                <a class="nav-link" href="index.html">Home </a>
+      
+                              </li>
+      
+                              <li class="nav-item active">
+      
+                                <a class="nav-link disabled" href="Contact.html">Contact</a>
+      
+                              </li>
+
+                              <li class="nav-item">
+
+                                    <a class="nav-link" href="SignIn.html">Sign In</a>
+                              </li>
+      
+                              <li class="nav-item">
+      
+                                <a class="nav-link" href="SignUp.html">
+      
+                                  Sign  Up
+      
+                                </a>
+      
+                              </li>
+
+                              <li class="nav-item">
+
+                                <a class="nav-link" href="GamePage.html">Game Page <span class="sr-only">(current)</span></a>
+                            </li>
+      
+                        </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                <form class="form-inline my-2 my-lg-0" id="search">
+
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    
+                                </form>
+                                </li>
+                            </ul>
+                          </div>
+      
+                        </nav>
+                    </header>
+ 
+ 
+ 
+      <form action="/my-handling-form-page" method="post">
+
+        <div>
+
+          <label for="name">Name:</label> <input type="text" id="name" name="user_name">
+
+        </div>
+
+        <div>
+
+          <label for="mail">E-mail:</label> <input type="email" id="mail" name="user_mail">
+
+        </div>
+
+        <div>
+
+          <label for="msg">Query:</label> <textarea id="quer" name="user_query"></textarea>
+
+        </div>
+
+        <div class="button">
+
+          <button type="submit">Submit</button>
+
+        </div>
+
+    </form>
     <div>
+        <footer>&copy; Revature LLC
+            <div class="container text-right" id="socialicons">
+                <a href="www.linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a>
+                <a href="www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>         
+            </div>
+        </footer>
+    
 
-      <label for="name">Name:</label> <input type="text" id="name" name="user_name">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        
     </div>
-
-    <div>
-
-      <label for="mail">E-mail:</label> <input type="email" id="mail" name="user_mail">
-
-    </div>
-
-    <div>
-
-      <label for="msg">Query:</label> <textarea id="quer" name="user_query"></textarea>
-
-    </div>
-
-    <div class="button">
-
-      <button type="submit">Submit</button>
-
-    </div>
-
-</form>
+</body>
+</html>

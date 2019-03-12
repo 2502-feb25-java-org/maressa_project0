@@ -1,0 +1,41 @@
+footer{
+    height: 60px;
+    background-color: gray;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    margin-top:20px;
+}
+
+.fa{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+    padding:0;
+  }
+
+#signup{
+    width: 50%;
+    margin: 0 auto;
+}
+
+header{
+    padding-bottom:20px;
+    width:100%;
+
+}
+
+#h1{
+    padding-right:0px;
+    padding-left:0px;
+    max-width:100%;
+}
+
+#search{
+    float:right;
+}
