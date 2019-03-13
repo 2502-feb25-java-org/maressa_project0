@@ -1,3 +1,8 @@
+html,body{
+    height:100%;
+    position: relative;
+}
+
 footer{
     height: 60px;
     background-color: gray;
@@ -6,6 +11,7 @@ footer{
     right: 0px;
     margin-bottom: 0px;
     margin-top:20px;
+    position:fixed;
 }
 
 .fa{

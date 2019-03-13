@@ -19,27 +19,31 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = 0;
-var lives = 3;
+var lives = 2;
+var brickshit = 0;
 
 var color;
 var colors = ['red', 'blue'];
-var brickcolors = [];
-/*brickcolors.length() = 15;
-for (let i = 0; i < brickcolors.length; i++) {
-    brickcolors[i] = new Array(3);
-    for (let j = 0; j < brickcolors[i].length; j++) {
-        brickcolors[i][j].push(colors[Math.floor(Math.random() * 2)]);
-    }
-}
-*/
+
+// Put the colors
 var bricks = [];
 for (var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for (var r = 0; r < brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1, color: Math.floor(Math.random() * 2)};
-
+        bricks[c][r] = { x: 0, y: 0, status: 1, color: colors[Math.floor(Math.random() * 2)]};
     }
 }
+
+var bcount = 0;
+//Count the amount of blue and make half of it your goal
+for(c = 0; c < brickColumnCount; c++){
+    for(r = 0; r < brickRowCount; r++){
+       if(bricks[c][r].color=='blue')
+            bcount++;
+    }
+}
+var goal = Math.round(bcount/2) 
+;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -68,12 +72,28 @@ function collisionDetection() {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                     dy = -dy;
                     b.status = 0;
-                    score++;
-                    //if(b.)
+                    brickshit++;
+                   
+                    if(b.color == 'blue'){
+                        score++;
+                    }
+                    else{
+                        score--;
+                    }
                     //////////////////////////////
-                    if (score == brickRowCount * brickColumnCount) {
+                    if (score == goal || brickshit == 15) {
                         alert("YOU WIN, CONGRATULATIONS!");
                         document.location.reload();
+                    }
+                    if (score < 0){
+                        if(lives != 0){
+                            lives--;
+                            score = 0;
+                        }
+                        else{
+                            alert("GAME OVER");
+                            document.location.reload();
+                        }
                     }
                     ///////////////////////////////////
                 }
@@ -91,6 +111,12 @@ function drawLives() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+}
+
+function drawGoal() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Goal: " + goal, 200, 20);
 }
 
 function drawBall() {
@@ -111,7 +137,6 @@ function drawBricks() {
 
     for (var c = 0; c < brickColumnCount; c++) {
         for (var r = 0; r < brickRowCount; r++) {
-            /*window.alert(brickcolors[c][r]);*/
             if (bricks[c][r].status == 1) {
                 var brickX = (r * (brickWidth + brickPadding)) + brickOffsetLeft;
                 var brickY = (c * (brickHeight + brickPadding)) + brickOffsetTop;
@@ -119,8 +144,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                //ctx.fillStyle = brickcolors[c][r];    
+                ctx.fillStyle = bricks[c][r].color;    
                 ctx.fill();
                 ctx.closePath();
             }
@@ -133,6 +157,7 @@ function draw() {
     drawBricks();
     drawBall();
     drawPaddle();
+    drawGoal();
     drawScore();
     drawLives();
     collisionDetection();
@@ -173,8 +198,6 @@ function draw() {
     x += dx;
     y += dy;
 
-    requestAnimationFrame();
-    //requestAnimationFrame();
+    requestAnimationFrame(draw);
 }
 draw();
-alert("hi");
