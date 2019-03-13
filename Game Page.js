@@ -42,7 +42,7 @@ for(c = 0; c < brickColumnCount; c++){
             bcount++;
     }
 }
-var goal = Math.round(bcount/2) 
+var goal = Math.round(bcount/2) + Math.round(bcount/5);
 ;
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -81,7 +81,7 @@ function collisionDetection() {
                         score--;
                     }
                     //////////////////////////////
-                    if (score == goal || brickshit == 15) {
+                    if (score == goal) {
                         alert("YOU WIN, CONGRATULATIONS!");
                         document.location.reload();
                     }
@@ -95,6 +95,11 @@ function collisionDetection() {
                             document.location.reload();
                         }
                     }
+                    if(brickshit == 15){
+                        alert("GAME OVER");
+                        document.location.reload();
+                    }
+
                     ///////////////////////////////////
                 }
             }

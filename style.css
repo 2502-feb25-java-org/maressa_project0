@@ -1,6 +1,7 @@
 html,body{
     height:100%;
     position: relative;
+    min-height:100%;
 }
 
 footer{
@@ -11,7 +12,8 @@ footer{
     right: 0px;
     margin-bottom: 0px;
     margin-top:20px;
-    position:fixed;
+    position:relative;
+    width:100%;
 }
 
 .fa{

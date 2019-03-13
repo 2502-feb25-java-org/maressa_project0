@@ -16,22 +16,19 @@
             document.body.appendChild( clon);
         </script>-->
     </head>
-
 <!------------------------------------------------------------------------------------------------------------------------->
-    
     <body>
         <div class="container" id="h1">
           <!----<template>-->
             <header>
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="navbar" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                       <img alt="Image Not found"
                         src="https://raw.githubusercontent.com/2502-feb25-java-org/training-code/master/02-Week2-SQL/rev-logo-2.png"
                           width="70" length="70" />
-      
-                              </li>
+                    </li>
       
                               <li class="nav-item">
       
@@ -65,71 +62,74 @@
                                 <a class="nav-link" href="GamePage.html">Game Page <span class="sr-only">(current)</span></a>
                             </li>
       
-                        </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
+                    </ul>
+                          <ul class="nav navbar-nav navbar-right">
+    
                                 <form class="form-inline my-2 my-lg-0" id="search">
 
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     
                                 </form>
-                                </li>
-                            </ul>
-                          </div>
-      
+                                
+                          </ul>
+                        </div>
                         </nav>
                     </header>
- 
-      <div class="row">
-      <div class="col-xl-6">
-        <h2>Contact Us!</h2>
-      <form action="/my-handling-form-page" method="post">
+                  </div>
+ <!-----------------------------------header end------------------------------------------------------------------------------->
+    <div class="container">
+        <div class="row">
+          <div class="col-xl-6">
+            <h2>Contact Us!</h2>
+          <form action="/my-handling-form-page" method="post">
 
-        <div>
+            <div>
 
-          <label for="name">Name:</label> <input type="text" id="name" name="user_name">
+              <label for="name">Name:</label> <input type="text" id="name" name="user_name">
 
-        </div>
+            </div>
 
-        <div>
+            <div>
 
-          <label for="mail">E-mail:</label> <input type="email" id="mail" name="user_mail">
+              <label for="mail">E-mail:</label> <input type="email" id="mail" name="user_mail">
 
-        </div>
+            </div>
 
-        <div>
+            <div>
 
-          <label for="msg">Query:</label> <textarea id="quer" name="user_query"></textarea>
+              <label for="msg">Query:</label> <textarea id="quer" name="user_query"></textarea>
 
-        </div>
+            </div>
 
-        <div class="button">
+            <div class="button">
 
-          <button type="submit">Submit Query</button>
+              <button type="submit">Submit Query</button>
 
-        </div>
+            </div>
 
-    </form>
+        </form>
     </div>
 
-    <div class = "col-xl-6">
-       <h1>Corporate Headquaters:</h1> 
-        <h3>11730 Plaza America Dr.
-            2nd Floor
-            Reston, VA 20190</h3>
-    </div>
-    </div>
+        <div class = "col-xl-6">
+          <h1>Corporate Headquaters:</h1> 
+            <h3>11730 Plaza America Dr.
+                2nd Floor
+                Reston, VA 20190</h3>
+        </div>
 
+    </div>
+    </div>
     <div>
-        <footer>&copy; Revature LLC
+        <footer style="position:absolute">&copy; Revature LLC
             <div class="container text-right" id="socialicons">
               <a href="https://www.linkedin.com/company/revature"><em class="fa fa-linkedin fa-2x"></em></a>
               <a href="https://www.facebook.com/revature/"><em class="fa fa-facebook fa-2x"></em></a>
               <a href="https://twitter.com/wearerevature?lang=en"><em class="fa fa-twitter fa-2x"></em></a>      
             </div>
         </footer>
+      </div>
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -141,7 +141,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        
-    </div>
 </body>
 </html>
